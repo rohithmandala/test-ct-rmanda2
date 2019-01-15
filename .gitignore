@@ -1,0 +1,7 @@
+clinicalTrials-ds.xml
+/target/
+.DS_Store
+
+.idea
+*.iml
+
