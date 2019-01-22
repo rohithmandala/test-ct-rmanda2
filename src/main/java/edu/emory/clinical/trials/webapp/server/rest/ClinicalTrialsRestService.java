@@ -389,7 +389,9 @@ public final class ClinicalTrialsRestService {
 		output.append("</th>\n");
 		output.append("<th>Display?\n");
 		output.append("</th>\n");
+		output.append("<th>Integration\n");
 		output.append("</tr>\n");
+		
 
 		try {
 			em.getTransaction().begin();
