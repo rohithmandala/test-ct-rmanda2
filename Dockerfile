@@ -1,6 +1,5 @@
 FROM maven:3.3.9
 
-RUN apt-get update
 RUN apt-get install -y zip moreutils
 RUN apt-get install git
 RUN apt-get install -y maven
