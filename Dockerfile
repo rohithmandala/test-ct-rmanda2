@@ -12,7 +12,13 @@ RUN pip install -U awscli boto3>=1.9.2 \
         redis pyyaml docker jsonschema
 
 WORKDIR /opt/workdir
-RUN git clone https://github.service.emory.edu/LITS/test-ct-rmanda2.git
+
+RUN mkdir clinical-trials
+RUN cd clinical-trials
+
+COPY src /opt/workdir/clinical-trials/
+COPY pom.xml /opt/workdir/clinical-trials/
+
 ENV PATH /opt/workdir/pipeline-scripts:$PATH
 ENV PYTHONPATH /opt/workdir/python-testutils:$PYTHONPATH
 
