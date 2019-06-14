@@ -10,7 +10,7 @@ WORKDIR /opt/workdir
 RUN mkdir clinical-trials
 RUN cd clinical-trials
 
-COPY src /opt/workdir/clinical-trials/
+ADD src /opt/workdir/clinical-trials/src
 COPY pom.xml /opt/workdir/clinical-trials/
 
 RUN cd /opt/workdir/clinical-trials/
