@@ -19,6 +19,7 @@ COPY src /opt/workdir/clinical-trials/
 COPY pom.xml /opt/workdir/clinical-trials/
 
 RUN cd /opt/workdir/clinical-trials/
+RUN rm /usr/share/maven/boot/plexus-classworlds-2.6.0.jar
 RUN ls -lrt /usr/share/maven/boot
 RUN mvn --version
 RUN mvn clean install -DskipTests
