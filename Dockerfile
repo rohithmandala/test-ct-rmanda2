@@ -1,9 +1,5 @@
 FROM maven:3.3.9
 
-RUN apt-get install -y zip moreutils
-RUN apt-get install git
-RUN apt-get install -y maven
-
 #RUN pip install -U pip wheel
 #RUN pip install -U awscli boto3>=1.9.2 \
 #        pytest pytest-mock pytest-xdist pytest-cov \
