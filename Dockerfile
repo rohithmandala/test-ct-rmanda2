@@ -16,6 +16,7 @@ RUN cd /opt/workdir/clinical-trials/
 #RUN rm /usr/share/maven/boot/plexus-classworlds-2.6.0.jar
 RUN ls -lrt /opt/workdir/clinical-trials/
 RUN mvn --version
+WORKDIR /opt/workdir/clinical-trials/
 RUN mvn clean install -DskipTests
 
 ENV PATH /opt/workdir/pipeline-scripts:$PATH
