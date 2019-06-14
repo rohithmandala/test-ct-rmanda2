@@ -1,4 +1,4 @@
-FROM maven
+FROM maven:3.3.9
 
 RUN apt-get update
 RUN apt-get install -y zip moreutils
@@ -19,7 +19,7 @@ COPY * /opt/workdir/clinical-trials/
 
 RUN cd /opt/workdir/clinical-trials/
 RUN rm /usr/share/maven/boot/plexus-classworlds-2.6.0.jar
-RUN ls -lrt /usr/share/maven/boot
+RUN ls -lrt /opt/workdir/clinical-trials/
 RUN mvn --version
 RUN mvn clean install -DskipTests
 
