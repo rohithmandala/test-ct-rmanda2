@@ -1,4 +1,4 @@
-FROM maven:3.6.1-jdk-11
+FROM maven
 
 RUN apt-get update
 RUN apt-get install -y zip moreutils
@@ -19,6 +19,7 @@ COPY src /opt/workdir/clinical-trials/
 COPY pom.xml /opt/workdir/clinical-trials/
 
 RUN cd /opt/workdir/clinical-trials/
+RUN mvn --version
 RUN mvn clean install -DskipTests
 ENV PATH /opt/workdir/pipeline-scripts:$PATH
 ENV PYTHONPATH /opt/workdir/python-testutils:$PYTHONPATH
