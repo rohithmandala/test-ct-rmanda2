@@ -5,7 +5,7 @@ ARG bb_auth_string
 RUN apt-get update
 RUN apt-get install -y zip moreutils
 RUN apt-get install git
-RUN apt-get install maven
+RUN apt-get install -y maven
 
 RUN pip install -U pip wheel
 RUN pip install -U awscli boto3>=1.9.2 \
